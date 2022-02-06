@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
 
     'projects.apps.ProjectsConfig',
     'users.apps.UsersConfig',
@@ -101,6 +103,15 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+
+# cloudinary credentials
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': settings.cloud_name,
+    'API_KEY': settings.api_key,
+    'API_SECRET': settings.api_secret
+}
+
 
 
 # DATABASES = {
@@ -177,3 +188,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# MEDIA_URL = '/media/'  # or any prefix you choose
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
