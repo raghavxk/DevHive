@@ -15,4 +15,3 @@ class Settings(BaseSettings):
 settings = Settings()
 
 
-# postgres://ojmwvjjk:nUWct1g8CuMNJdYg8a7K_HAkZHtSbtdo@john.db.elephantsql.com/ojmwvjjk
