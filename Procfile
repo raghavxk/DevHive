@@ -1,1 +1,1 @@
-web: gunicorn devSearch.wsgi
+web: python manage.py runserver
